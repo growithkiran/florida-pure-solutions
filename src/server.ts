@@ -1,3 +1,17 @@
+import homeHtml from '../website-source/dist/index.html?raw';
+import testingHtml from '../website-source/dist/water-testing/index.html?raw';
+import wholeHomeHtml from '../website-source/dist/whole-house-water-filtration/index.html?raw';
+import drinkingHtml from '../website-source/dist/reverse-osmosis-systems/index.html?raw';
+import careHtml from '../website-source/dist/filter-replacement/index.html?raw';
+
+const websitePages: Record<string, string> = {
+  '/': homeHtml,
+  '/water-testing/': testingHtml,
+  '/whole-house-water-filtration/': wholeHomeHtml,
+  '/reverse-osmosis-systems/': drinkingHtml,
+  '/filter-replacement/': careHtml,
+};
+
 import "./lib/error-capture";
 
 import { consumeLastCapturedError } from "./lib/error-capture";
@@ -47,6 +61,19 @@ function isH3SwallowedErrorBody(body: string): boolean {
 export default {
   async fetch(request: Request, env: unknown, ctx: unknown) {
     try {
+      const url = new URL(request.url);
+      const route = url.pathname.replace(/index\.html$/, '');
+      const canonical = route.endsWith('/') ? route : `${route}/`;
+      const page = websitePages[canonical];
+      if (page && (request.method === 'GET' || request.method === 'HEAD')) {
+        if (!route.endsWith('/')) {
+          url.pathname = canonical;
+          return Response.redirect(url, 308);
+        }
+        return new Response(request.method === 'HEAD' ? null : page, {
+          headers: { 'content-type': 'text/html; charset=utf-8', 'x-robots-tag': 'noindex, nofollow' },
+        });
+      }
       const handler = await getServerEntry();
       const response = await handler.fetch(request, env, ctx);
       return await normalizeCatastrophicSsrResponse(response);

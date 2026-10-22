@@ -1,0 +1,29 @@
+/* Adapted from Hirael Feature 08, MIT, Mohammad Shehadeh.
+   https://github.com/MohammadShehadeh/hirael — native, scoped brand adaptation. */
+.care-feature-section{background:#f4f8fc;padding-block:100px;overflow:clip}
+.care-feature-section .care-intro{max-width:760px;text-align:center;margin:0 auto 64px;display:flex;flex-direction:column;align-items:center}
+.care-feature-section .care-badge{display:inline-flex;border:1px solid #c4d9e9;border-radius:99px;background:#ffffffa6;color:#0752c7;padding:10px 16px;font-size:10px;line-height:1.4;letter-spacing:.12em;margin:0 0 25px}
+.care-feature-section .care-intro h2{font-size:clamp(38px,4vw,54px);line-height:1.12;letter-spacing:-.045em}
+.care-feature-section .care-intro h2 span{color:#0752c7}
+.care-feature-section .care-intro>p{max-width:59ch;font-size:15px;line-height:1.85;margin:23px auto 0;color:#4e697d}
+.care-feature-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px;max-width:1152px;margin-inline:auto}
+.care-feature{position:relative;isolation:isolate;display:flex;flex-direction:column;gap:27px;padding:32px 28px 30px;min-height:266px;background:radial-gradient(ellipse 70% 80% at 20% 0%,#d7ebfa66,transparent),#fff;box-shadow:0 1px 2px #132c4005}
+.care-feature:before{content:'';position:absolute;inset:-1px -16px;border-block:1px solid #cddfea;z-index:-1;pointer-events:none}
+.care-feature:after{content:'';position:absolute;inset:-16px -1px;border-inline:1px solid #cddfea;z-index:-1;pointer-events:none}
+.care-cross{position:absolute;width:14px;height:14px;color:#7c9fb8;pointer-events:none;z-index:2}
+.care-cross:before,.care-cross:after{content:'';position:absolute;background:currentColor}
+.care-cross:before{width:14px;height:1px;left:0;top:6px}.care-cross:after{width:1px;height:14px;left:6px;top:0}
+.care-cross-start{left:-7px;top:-7px}.care-cross-end{right:-7px;bottom:-7px}
+.care-feature-top{display:flex;align-items:center;justify-content:space-between;position:relative}
+.care-feature-icon{position:relative;display:grid;place-items:center;width:47px;height:47px;border:1px solid #cfdfec;background:#f1f7fc;color:#0752c7;border-radius:3px;transition:border-color 180ms cubic-bezier(.23,1,.32,1)}
+.care-feature-icon svg{width:23px;height:23px}.care-feature-number{font-size:10px;letter-spacing:.1em;color:#657f93;font-variant-numeric:tabular-nums}
+.care-feature-top:before{content:'';position:absolute;inset:-32px -28px auto;height:266px;pointer-events:none;opacity:0;background:radial-gradient(circle 200px at var(--care-x,50%) var(--care-y,0%),#64b9ff24,transparent 70%);transition:opacity 220ms cubic-bezier(.23,1,.32,1)}
+.care-feature-copy{position:relative}.care-feature h3{font-size:17px;line-height:1.4;letter-spacing:-.025em;color:#132c40;margin:0 0 11px;font-weight:700}.care-feature p{font-size:13px;line-height:1.85;margin:0;color:#4e697d}
+.care-feature-footer{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:12px 30px;text-align:center;margin:48px auto 0}.care-feature-footer p{font-size:12px;line-height:1.8;color:#4e697d}.care-feature-footer .text-link{min-height:44px;gap:10px;font-size:12px;color:#0752c7}
+@media(hover:hover) and (pointer:fine){html:not([data-input-mode="keyboard"]) .care-feature:hover .care-feature-top:before{opacity:1}.care-feature:hover .care-feature-icon{border-color:#64a9df}}
+@media(max-width:1100px){.care-feature-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.care-feature{min-height:250px}.care-feature-top:before{height:250px}}
+@media(max-width:900px){.care-feature-section{padding-block:78px}.care-feature-section .care-intro{margin-bottom:52px}.care-feature{padding-inline:25px}.care-feature-top:before{left:-25px;right:-25px}}
+@media(max-width:700px){.care-feature-section{padding-block:65px}.care-feature-section .care-intro{margin-bottom:45px}.care-feature-section .care-badge{font-size:9px;padding:9px 12px;margin-bottom:22px}.care-feature-section .care-intro h2{font-size:38px}.care-feature-section .care-intro>p{font-size:14px;line-height:1.8;margin-top:20px}.care-feature-grid{grid-template-columns:1fr;gap:30px;margin-inline:12px}.care-feature{min-height:0;padding:27px 25px;gap:23px}.care-feature h3{font-size:18px}.care-feature p{font-size:14px;line-height:1.8}.care-feature-footer{margin-top:35px;gap:5px}.care-feature-footer p{font-size:12px;max-width:29ch}.care-feature-footer .text-link{font-size:11px}}
+@media(prefers-reduced-motion:reduce){.care-feature-icon,.care-feature-top:before{transition:none}.care-feature-top:before{display:none}}
+html[data-motion-preference="reduced"] .care-feature-top:before{display:none}
+.care-feature-section .care-badge{background:none;border:0;border-radius:0;padding:0;box-shadow:none}

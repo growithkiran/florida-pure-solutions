@@ -1,0 +1,24 @@
+/* Reference-led product photograph. No pinned hero or continuous image motion. */
+.hero-image{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr auto;width:calc(100% - 48px);max-width:1280px;height:auto;min-height:clamp(620px,calc(100svh - 140px),760px);max-height:none;background:#e7f2fb;overflow:hidden}
+.hero-image .hero-photograph{position:absolute;inset:0 0 57px;z-index:0;overflow:hidden;pointer-events:none}
+.hero-image .hero-photograph img{position:absolute;right:0;top:0;height:100%;width:auto;max-width:none;display:block;mask-image:linear-gradient(90deg,transparent,#000 15%)}
+.hero-image .hero-photograph:after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,#e7f2fbf5 0%,#e7f2fbc2 23%,#e7f2fb66 34%,transparent 47%)}
+.hero-image .hero-copy{grid-column:1;grid-row:1;padding:38px 20px 38px 56px;align-self:center;position:relative;z-index:2}
+.hero-image h1{font-size:clamp(48px,4.8vw,74px);line-height:1.08}
+.hero-image .hero-copy>p:not(.hero-note){max-width:390px;font-size:15px;line-height:1.8;margin-top:30px;color:#48657b}
+.hero-image .hero-location{grid-row:2;grid-column:1/-1;min-height:57px;padding:12px 56px;background:#e9f3faf2;border-top:1px solid #c9deeb;color:#36556d}
+.hero-image .hero-location a{min-height:32px}
+@media(min-width:901px) and (max-height:740px){.hero-image{min-height:590px}.hero-image h1{font-size:clamp(48px,4.2vw,68px)}.hero-image .hero-copy{padding-block:25px}.hero-image .hero-copy>p:not(.hero-note){font-size:14px;line-height:1.7;margin-top:26px}.hero-image .hero-actions{margin-top:20px}.hero-image .hero-note{margin-top:9px}}
+@media(min-width:701px) and (max-width:1000px){.hero-image{width:calc(100% - 32px);height:650px;min-height:0;grid-template-columns:1.05fr 1fr}.hero-image .hero-copy{padding:35px 12px 35px 30px}.hero-image h1{font-size:48px}.hero-image .hero-copy>p:not(.hero-note){font-size:13px;max-width:300px}.hero-image .hero-photograph img{right:0}.hero-image .hero-photograph:after{background:linear-gradient(90deg,#e7f2fbf5 0%,#e7f2fbb3 28%,#e7f2fb59 40%,transparent 54%)}.hero-image .hero-location{padding-inline:30px}}
+@media(max-width:700px){.hero-image{width:calc(100% - 24px);height:auto;min-height:0;max-height:none;display:flex;background:#e7f2fb}.hero-image .hero-copy{order:0;padding:32px 23px 20px;align-self:stretch}.hero-image h1{font-size:clamp(43px,11.3vw,60px)}.hero-image .hero-copy>p:not(.hero-note){font-size:14px;margin-top:27px;line-height:1.75;max-width:36ch}.hero-image .hero-actions{margin-top:21px;gap:5px}.hero-image .hero-note{margin-top:5px}.hero-image .hero-photograph{order:1;position:relative;inset:auto;width:100%;height:300px;flex-shrink:0;margin-top:0}.hero-image .hero-photograph img{height:100%;right:0;mask-image:none}.hero-image .hero-photograph:after{background:linear-gradient(180deg,#e7f2fb,transparent 12%)}.hero-image .hero-location{order:2;padding:13px 23px;min-height:0;background:#e9f3fa}.hero-image .hero-location a{min-height:30px}}
+@media(max-width:375px){.hero-image .hero-copy{padding-inline:20px}.hero-image h1{font-size:43px}.hero-image .hero-photograph{height:275px}.hero-image .hero-actions .btn{font-size:11px}.hero-image .hero-copy>p:not(.hero-note){font-size:13px}.hero-image .hero-location{padding-inline:20px}}
+@media(min-width:701px) and (max-width:1100px){.hero-image{display:flex;flex-direction:column;height:auto;min-height:0}.hero-image .hero-copy{order:0;padding:38px 36px 23px;align-self:stretch}.hero-image h1{font-size:54px}.hero-image .hero-copy>p:not(.hero-note){max-width:440px;font-size:14px}.hero-image .hero-actions{flex-direction:row;align-items:center;gap:23px}.hero-image .hero-photograph{position:relative;inset:auto;height:390px;order:1;flex-shrink:0}.hero-image .hero-photograph img{right:0;mask-image:none}.hero-image .hero-photograph:after{background:linear-gradient(180deg,#e7f2fb,transparent 12%)}.hero-image .hero-location{order:2;padding-inline:36px}}
+
+/* Atmospheric architectural photograph, blended lightly into the copy plane. */
+.hero-image{background:#edf5f8}
+.hero-image .hero-photograph:after{background:linear-gradient(90deg,#edf5f8d9 0%,#edf5f88c 23%,#edf5f833 34%,transparent 47%)}
+@media(min-width:901px) and (max-width:1000px){.hero-image .hero-photograph:after{background:linear-gradient(90deg,#edf5f8e6 0%,#edf5f8a6 28%,#edf5f84d 40%,transparent 54%)}}
+@media(max-width:1100px){
+ .hero-image .hero-copy{background:radial-gradient(ellipse at 95% 0%,#c8e7f380,transparent 68%),linear-gradient(145deg,#f9fbfa,#e8f3f8 60%,#e4eff5)}
+ .hero-image .hero-photograph:after{background:none}
+}

@@ -9,7 +9,6 @@ import {
 } from "@tanstack/react-router";
 import { useEffect, type ReactNode } from "react";
 
-import appCss from "../styles.css?url";
 import { reportVibeError } from "../lib/vibe-error-reporting";
 
 function NotFoundComponent() {
@@ -77,18 +76,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "AI Studio App" },
-      { name: "description", content: "AI Studio Generated Project" },
-      { name: "author", content: "AI Studio" },
-      { property: "og:title", content: "AI Studio App" },
-      { property: "og:description", content: "AI Studio Generated Project" },
+      { title: "Florida Pure Solutions" },
+      { name: "description", content: "Residential water testing, filtration and filter care." },
+      { name: "robots", content: "noindex, nofollow" },
+      { property: "og:title", content: "Florida Pure Solutions" },
+      { property: "og:description", content: "Residential water testing, filtration and filter care." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
       {
         rel: "stylesheet",
-        href: appCss,
+        href: "/styles.css",
       },
     ],
   }),

@@ -1,0 +1,10 @@
+{
+  "name": "florida-pure-solutions",
+  "version": "1.6.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node server.mjs",
+    "check": "node --check dist/app.js && node --check dist/planner.js && node --check dist/report.js && node --check dist/premium-motion.js && node --check dist/filter-scene.js && node --check dist/water-models.js && node --check dist/product-scene.js && node --check dist/calm-hero.js && node --check dist/section-motion.js && node --check dist/site-preview.js && node --check dist/fit-carousel.js"
+  }
+}

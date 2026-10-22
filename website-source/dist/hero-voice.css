@@ -1,0 +1,38 @@
+/* Dedicated browser voice, directly beneath the primary hero CTA. */
+.hero-image .hero-actions{display:grid;grid-template-columns:max-content max-content;align-items:start;gap:10px 18px}
+.hero-image .hero-actions>.btn{grid-column:1;grid-row:1}
+.hero-image .hero-actions>.text-link{grid-column:2;grid-row:1;align-self:center}
+.hero-voice{grid-column:1/-1;grid-row:2;width:280px;max-width:100%;min-width:0;padding-top:4px;text-align:center}
+.hero-voice-label{font-size:11px;line-height:1.6;color:#48657b;margin:0 0 5px}
+.hero-voice-mount{min-height:296px;width:100%;position:relative}
+.hero-voice-mount>chat-widget{display:block;width:100%;max-width:100%}
+.hero-voice-status{font-size:11px;line-height:1.65;color:#48657b;min-height:18px}
+.hero-voice-status[hidden]{display:none}
+.hero-voice-status button{font:inherit;font-weight:700;color:#0752c7;background:none;border:0;min-height:44px;padding:8px 12px;cursor:pointer;text-decoration:underline;text-underline-offset:3px}
+.hero-voice-status button[hidden]{display:none}
+.hero-voice-status button:focus-visible{outline:2px solid #0752c7;outline-offset:2px;border-radius:4px}
+.hero-voice[data-state=error] .hero-voice-mount{display:none}
+.hero-voice noscript p{font-size:12px;line-height:1.7}
+/* Fill the hero without fading the photograph at its top or bottom. */
+@media(min-width:1101px){.hero-image .hero-photograph img{width:100%;height:100%;max-height:none;object-fit:cover;object-position:right center;top:0;transform:scale(1.45);transform-origin:right center;mask-image:linear-gradient(90deg,transparent,#000 15%)}}
+@media(min-width:1101px) and (max-width:1250px){.hero-image .hero-photograph img{transform:scale(1.2)}}
+@media(min-width:901px) and (max-width:1100px){.hero-image .hero-actions{grid-template-columns:1fr}.hero-image .hero-actions>.text-link{grid-column:1;grid-row:3;justify-self:start}}
+@media(max-width:700px){.hero-image .hero-actions{display:flex;flex-direction:column;align-items:center;gap:8px}.hero-image .hero-actions>.btn{order:0}.hero-image .hero-actions>.text-link{order:2;align-self:center}.hero-voice{order:1;width:280px}.hero-voice-mount{min-height:296px}}
+
+/* Stack before the image and copy can compete on compact screens. */
+@media(min-width:701px) and (max-width:1100px){.hero-image .hero-actions{grid-template-columns:max-content max-content}.hero-image .hero-actions>.text-link{grid-column:2;grid-row:1;justify-self:start}.hero-image .hero-photograph img{width:100%;height:100%;object-fit:cover;object-position:right center}}
+
+@media(min-width:701px) and (max-width:1100px){.hero-image .hero-copy{text-align:center}.hero-image h1 .headline-line,.hero-image .hero-copy>p{margin-inline:auto}.hero-image .hero-actions{justify-content:center}.hero-image .hero-note{justify-content:center}.hero-image .hero-voice{justify-self:center}}
+
+/* One mobile photograph spans both the copy and the product space. */
+@media(max-width:700px){
+ .hero-image{--hero-bottom-crop:180px;display:grid;grid-template-columns:minmax(0,1fr);grid-template-rows:auto calc(max(480px,110vw) - var(--hero-bottom-crop)) auto}
+ .hero-image .hero-photograph{position:relative;inset:auto;grid-column:1;grid-row:1/3;width:100%;height:auto;min-height:0;align-self:stretch;order:initial}
+ .hero-image .hero-photograph img{width:100%;height:calc(100% + var(--hero-bottom-crop));object-fit:cover;object-position:right bottom;mask-image:none;transform:none;right:0;top:0}
+ .hero-image .hero-photograph:after{display:none}
+ .hero-image .hero-copy{grid-column:1;grid-row:1;background:none;align-self:start}
+ .hero-image .hero-copy>p:not(.hero-note),.hero-image .hero-voice-label{color:#29485f}
+ .hero-image .hero-location{grid-column:1;grid-row:3;position:relative;order:initial}
+ .service-strip{grid-auto-rows:minmax(44px,1fr);gap:14px}
+ .service-strip>span{min-height:44px}
+}
