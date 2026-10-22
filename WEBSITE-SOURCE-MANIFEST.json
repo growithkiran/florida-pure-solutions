@@ -1,5 +1,5 @@
 {
-  "source_commit": "af6c5f422421796675e1ebf97039b2b44900a186",
+  "source_commit": "50382196a4e42f5402ab5b27437d7ef228b9bd0e",
   "files": [
     {
       "path": ".gitignore",
@@ -7,7 +7,11 @@
     },
     {
       "path": "create-service-pages.mjs",
-      "sha256": "1e25e361dd0374521973a2f981be5d2415fd5cb3959b339bb37adb9711d1ca6f"
+      "sha256": "0fde6fbb6617a3dbe112ba26a5899e02dc573a4dcbe6480fdec5563e89082cd0"
+    },
+    {
+      "path": "HERO-IMAGE-NOTES.md",
+      "sha256": "6518e11fd59d060d522bb054e870a16fe07d96f7038a974be08053c72c74a558"
     },
     {
       "path": "package.json",
@@ -19,7 +23,7 @@
     },
     {
       "path": "dist/app.js",
-      "sha256": "9dc02f2356e866daa5a3a0f677168e50544cd141fe68f08583f4ca85b75a4e13"
+      "sha256": "a4f3d69610761bffc5e44fc91b8c56c1113366f5460c14927ae0dfea636c6a4d"
     },
     {
       "path": "dist/calm-hero.js",
@@ -63,7 +67,7 @@
     },
     {
       "path": "dist/index.html",
-      "sha256": "4c5e7a35aecedd167391df9b1a75964cda5cb7c11c376f9a4f0d96f282d86f45"
+      "sha256": "0984ba12f551b47b816e4ad8c6a7c9d319c60bc1c17820d03d84baeecaea1299"
     },
     {
       "path": "dist/planner.js",
@@ -95,7 +99,7 @@
     },
     {
       "path": "dist/sections.css",
-      "sha256": "8ca7584d1e7ca2d1ccf7254f25d67a6fe580eb56cd85e045c95c4797df8a4e71"
+      "sha256": "d2f41e502a0281b223f7fe1dc9a2c84a4ab57b57d653b3dc7598f5b316ea11af"
     },
     {
       "path": "dist/service-page.js",
@@ -186,6 +190,14 @@
       "sha256": "67a0e79be1140412bcc23b555b3e2d3af74f94b992003ce854b471a1475c8d12"
     },
     {
+      "path": "dist/assets/purifier-hero-editorial-desktop-v4.webp",
+      "sha256": "9eef51ea5f2fbdac786ca7631b34622ddcf09547748199745dbb6d39e552ac10"
+    },
+    {
+      "path": "dist/assets/purifier-hero-editorial-mobile-v2.webp",
+      "sha256": "1fab0b943599eb352bb601ee77d390dbb9eef55e8fabd8a3cf7bddcfafa628b1"
+    },
+    {
       "path": "dist/assets/purifier-hero-mobile-continuous-v1.webp",
       "sha256": "b4c59b30733e15fa0af0ec3b4565dcb226afde926b8689a2f4013aa019ed8360"
     },
@@ -203,11 +215,11 @@
     },
     {
       "path": "dist/filter-replacement/index.html",
-      "sha256": "8b4f34142c5ed3bd6bf7b4c745e71a99a23f0c122491f6c19d498cf235b4c81c"
+      "sha256": "664f891e78046d4edcf5b03c3d2605086922104d7ddf451aec452f835e3a3d0c"
     },
     {
       "path": "dist/reverse-osmosis-systems/index.html",
-      "sha256": "ef87fa45fa1545223e2109e1bbe44eab818cae2b24b3516b498f956b89db8215"
+      "sha256": "7cdf5dafdf8457abc51bbc8fd87a98326ec685637e89f4020730ec256243ee16"
     },
     {
       "path": "dist/vendor/fontkit-1.1.1.min.js",
@@ -251,11 +263,11 @@
     },
     {
       "path": "dist/water-testing/index.html",
-      "sha256": "aca6e28b7fc28bba7cf8d01e3b513956bd98f80821529628aeda171abb1bde73"
+      "sha256": "391809306964ca320341f4cb3e5fe1ab5a6e0fc379939ed2232860ef21546865"
     },
     {
       "path": "dist/whole-house-water-filtration/index.html",
-      "sha256": "7462fe63266586ddf754eadf70d60ec9b0587d888d48b26047e9dde2ea5e461e"
+      "sha256": "08904d834191fc9e65f251f782a4df1eabfd4dc014afac5626be037dbfba14e8"
     }
   ]
 }
